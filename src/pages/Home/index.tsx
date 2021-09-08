@@ -13,9 +13,9 @@ function Home() {
 	if (!useUser.authenticated) {
 		return <Redirect to="login"></Redirect>
 	}
-	
+
 	return (
-		
+
 		<UserContextConsumer>
 			{
 				({username, authenticated}) => {
@@ -23,17 +23,17 @@ function Home() {
 						return (
 							<div className={styles.Home}>
 								<Header username={username}></Header>
-								<CustomAudio></CustomAudio>
+								<CustomAudio songId={1}></CustomAudio>
 							</div>
 						)
 					}
 				}
 			}
 		</UserContextConsumer>
-		
+
 	)
 
-	
+
 }
 
 export default Home
